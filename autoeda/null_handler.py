@@ -127,6 +127,6 @@ def process_csv(input_path: str, output_path: str) -> None:
 
     # Save log file
     log_file_path = os.path.join(os.path.dirname(output_path), "null_handling_log.txt")
-    with open(log_file_path, "w") as f:
+    with open(log_file_path, "w", encoding="utf-8") as f:
         f.write("\n".join(log_lines))
     logging.info(f"Decision-making log saved at: {log_file_path}")
